@@ -60,19 +60,19 @@ if(isset($_POST['post'])){
           });
           // action that happens when I am scrolling
           $(window).scroll(function() {
-              const height = $('.posts_area').height(); // div containing posts
-              const scroll_top = $(this).scrollTop();
-              const page = $('.posts_area').find('.nextPage').val();
-              const noMorePosts = $('.posts_area').find('.noMorePosts').val();
+              let height = $('.posts_area').height(); // div containing posts
+              let scroll_top = $(this).scrollTop();
+              let page = $('.posts_area').find('.nextPage').val();
+              let noMorePosts = $('.posts_area').find('.noMorePosts').val();
 
               if ((document.body.scrollHeight == document.body.scrollTop + window.innerHeight) 
               && noMorePosts == 'false') {
                   $('#loading').show();
 
-                 const ajaxReq = $.ajax ({
+                 let ajaxReq = $.ajax ({
                      url: "includes/handlers/ajax_load_posts.php",
                      type: "POST",
-                     data: "page= " + page + "&userLoggedIn=" + userLoggedIn,
+                     data: "page=" + page + "&userLoggedIn=" + userLoggedIn,
                      cache: false,
 
                      success: function(response) {

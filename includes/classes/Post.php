@@ -72,7 +72,7 @@ class Post {
             $num_iterations = 0; // Number of results checked (not necessarily posted)
             $count = 1;
         
-        while ( $row = mysqli_fetch_array( $data)){
+        while ( $row = mysqli_fetch_array( $data_query)){
             $id = $row['id'];
             $body = $row['body'];
             $added_by = $row['added_by'];
@@ -201,8 +201,7 @@ class Post {
         }
 
     }
-
-        echo $str;
+    echo $str;
 
     
         

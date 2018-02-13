@@ -16,7 +16,7 @@ if( isset($_SESSION['username'])){
 ?>
 <html>
 <head>
-     <title>SocioNet</title>
+     <title>socialfeed</title>
      <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
      <script src = "assets/js/bootstrap.js"></script>
      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
@@ -27,7 +27,7 @@ if( isset($_SESSION['username'])){
 
 <div class ="top_bar">
     <div class ="logo">
-        <a href="index.php">SocioNet</a>
+        <a href="index.php">socialfeed</a>
     </div>   
     <nav>
         <a href="<?php echo $userLoggedIn; ?>"><?php echo $user['first_name']; ?></a>
